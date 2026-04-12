@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ATLAS — Earl of March S.S. 12-hour hackathon. May 2, 2026. Code. Create. Conquer the deep." />
+    <title>ATLAS Hackathon · May 2, 2026 · Earl of March S.S.</title>
+    <link rel="icon" href="/images/octopus.png" type="image/png" />
+
+    <!-- Google Fonts: body + display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,600&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.cdnfonts.com/css/gemini-brush" rel="stylesheet">
+
+    <!-- Touch of Nature — must be a <link>, NOT a CSS @import, so Vite/PostCSS never touches it -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/touch-of-nature" />
+    <link href="https://fonts.cdnfonts.com/css/super-ocean" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/oh-whale" rel="stylesheet">
+
+
+    <!-- Font Awesome 6 (webfont + CSS classes: fa-solid, fa-regular, …) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <style>
+      /*
+        Belt-and-suspenders: define the font-face here too so the browser
+        has a direct declaration it can't miss, even if the CDN link resolves
+        asynchronously. We target the exact family name the CDN exports.
+      */
+      .font-nature,
+      [class*="font-nature"] {
+        font-family: 'Touch of Nature', 'Playfair Display', cursive !important;
+      }
+      /* Poppins — same belt-and-suspenders; Tailwind utilities can lose to specificity otherwise */
+      .font-body,
+      [class*='font-body'],
+      .hero-subtitle {
+        font-family: 'Poppins', 'Plus Jakarta Sans', system-ui, sans-serif !important;
+      }
+      /* Poppins — same belt-and-suspenders */
+      .font-body,
+      [class*='font-display'] {
+        font-family: 'Poppins', 'Bebas Neue', cursive !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
