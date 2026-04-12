@@ -29,29 +29,32 @@ export default function Hero() {
     });
   }, [loaded]);
 
-  const jellies = [
-    {
-      src: "/images/jelly-pink.png",
-      cls: "jelly-float",
-      w: 170,
-      style: { right: "4%", top: "10%" },
-      delay: "0s",
-    },
-    {
-      src: "/images/jelly-teal.png",
-      cls: "jelly-float2",
-      w: 140,
-      style: { right: "19%", top: "52%" },
-      delay: "1.8s",
-    },
-    {
-      src: "/images/jelly-gold.png",
-      cls: "jelly-float3",
-      w: 120,
-      style: { left: "4%", top: "56%" },
-      delay: "3.1s",
-    },
-  ];
+    const jellies = [
+      {
+        src: "/images/jelly-pink.png",
+        cls: "jelly-float",
+        w: 170,
+        style: { right: "4%", top: "10%" },
+        mobileW: 70,
+        delay: "0s",
+      },
+      {
+        src: "/images/jelly-teal.png",
+        cls: "jelly-float2",
+        w: 140,
+        style: { right: "19%", top: "52%" },
+        mobileW: 60,
+        delay: "1.8s",
+      },
+      {
+        src: "/images/jelly-gold.png",
+        cls: "jelly-float3",
+        w: 120,
+        style: { left: "4%", top: "56%" },
+        mobileW: 55,
+        delay: "3.1s",
+      },
+    ];
 
   return (
     <section
