@@ -35,7 +35,7 @@ export default function CountdownTimer() {
 
   return (
     <div
-      className="flex flex-nowrap items-center justify-center gap-1 sm:gap-2"
+      className="flex flex-nowrap items-start justify-center gap-1 sm:gap-2"
       role="timer"
       aria-live="polite"
       aria-label="Time until hackathon start"
@@ -52,7 +52,7 @@ export default function CountdownTimer() {
           </div>
           {i < 3 && (
             <span
-              className="countdown-colon text-aqua-mid font-light opacity-70 select-none shrink-0"
+              className="countdown-colon text-aqua-mid font-light opacity-70 select-none shrink-0 mt-4 sm:mt-5"
               aria-hidden
             >
               :

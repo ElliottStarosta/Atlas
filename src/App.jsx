@@ -21,7 +21,7 @@ export default function App() {
         <WhyJoin />
         <Schedule />
         <FAQ />
-        {/* <Contact /> */}
+        <Contact />
       </main>
       <Footer />
     </div>

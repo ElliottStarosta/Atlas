@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 
-/** Fixed layout — no Math.random (stable paint) + fewer nodes for smoother scroll */
+/** Fixed layout;no Math.random (stable paint) + fewer nodes for smoother scroll */
 const BUBBLE_PRESET = [
   { size: 14, left: 8, top: 12, dur: 18, delay: 0 },
   { size: 10, left: 72, top: 8, dur: 22, delay: 4 },
