@@ -849,7 +849,7 @@ export default function FAQ() {
           }}
         />
         <img
-          src="/images/jelly-gold__1_.png"
+          src="/images/jelly-gold.png"
           alt=""
           className="pointer-events-none absolute hidden lg:block"
           style={{

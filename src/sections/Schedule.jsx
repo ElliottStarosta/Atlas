@@ -466,7 +466,7 @@ export default function Schedule() {
           }}
         />
         <img
-          src="/images/jelly-gold__1_.png"
+          src="/images/jelly-gold.png"
           alt=""
           className="sch3-float pointer-events-none absolute hidden md:block"
           style={{

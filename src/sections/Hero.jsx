@@ -45,7 +45,7 @@ export default function Hero() {
       delay: "1.8s",
     },
     {
-      src: "/images/jelly-gold__1_.png",
+      src: "/images/jelly-gold.png",
       cls: "jelly-float3",
       w: 120,
       style: { left: "4%", top: "56%" },

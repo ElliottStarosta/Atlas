@@ -413,7 +413,7 @@ export default function About() {
             }}
           />
           <img
-            src="/images/jelly-gold__1_.png"
+            src="/images/jelly-gold.png"
             alt=""
             className="ab-jelly-c absolute hidden md:block"
             style={{

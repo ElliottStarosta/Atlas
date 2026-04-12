@@ -69,7 +69,7 @@ const CREATURES = [
     delay: "2.2s",
   },
   {
-    src: "/images/jelly-gold__1_.png",
+    src: "/images/jelly-gold.png",
     cls: "jelly-float3",
     style: { width: 65, right: "10%", top: "62%" },
     delay: "1.1s",

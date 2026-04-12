@@ -47,7 +47,7 @@ const CREATURES = [
     opacity: 0.5,
   },
   {
-    src: "/images/jelly-gold__1_.png",
+    src: "/images/jelly-gold.png",
     cls: "ct-float-a",
     style: { left: "5%", top: "70%", width: "min(70px,12vw)" },
     opacity: 0.6,
