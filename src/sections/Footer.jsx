@@ -702,7 +702,7 @@ export default function Footer() {
                 style={{ color: "rgba(25, 251, 255, 0.75)" }}
                 aria-hidden
               />
-              Made with code &amp;caffeine
+              Made with code &amp; caffeine
             </p>
           </div>
         </div>
