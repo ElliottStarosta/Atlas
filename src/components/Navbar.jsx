@@ -1,25 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const links = [
-  { label: "About",    href: "#about",    icon: "fa-water"       },
-  { label: "Why Join", href: "#why-join", icon: "fa-fish"        },
-  { label: "Schedule", href: "#schedule", icon: "fa-calendar-day"},
-  { label: "FAQ",      href: "#faq",      icon: "fa-circle-info" },
-  { label: "Contact",  href: "#contact",  icon: "fa-envelope"    },
+  { label: "About", href: "#about", icon: "fa-water" },
+  { label: "Why Join", href: "#why-join", icon: "fa-fish" },
+  { label: "Schedule", href: "#schedule", icon: "fa-calendar-day" },
+  { label: "FAQ", href: "#faq", icon: "fa-circle-info" },
+  { label: "Contact", href: "#contact", icon: "fa-envelope" },
 ];
 
 const NAV_BUBBLES = Array.from({ length: 9 }, (_, i) => ({
-  id:    i,
-  size:  2 + (i % 4),
-  left:  `${8 + i * 10}%`,
-  dur:   `${2.8 + (i % 5) * 0.55}s`,
+  id: i,
+  size: 2 + (i % 4),
+  left: `${8 + i * 10}%`,
+  dur: `${2.8 + (i % 5) * 0.55}s`,
   delay: `${(i * 0.6) % 3}s`,
 }));
 
 export default function Navbar() {
-  const [open,     setOpen]     = useState(false);
+  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [active,   setActive]   = useState("");
+  const [active, setActive] = useState("");
   const [revealed, setRevealed] = useState(false);
   const navRef = useRef(null);
 
@@ -28,7 +28,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 40);
       const secs = ["about", "why-join", "schedule", "faq", "contact"];
       let found = false;
-      for (let i = secs.length - 1;i >= 0;i--) {
+      for (let i = secs.length - 1; i >= 0; i--) {
         const el = document.getElementById(secs[i]);
         if (el && window.scrollY >= el.offsetTop - 140) {
           setActive(`#${secs[i]}`);
@@ -391,27 +391,30 @@ export default function Navbar() {
           background: scrolled
             ? "linear-gradient(180deg, rgba(4,14,28,0.92) 0%, rgba(5,22,42,0.88) 100%)"
             : "linear-gradient(180deg, rgba(4,14,28,0.6) 0%, transparent 100%)",
-          backdropFilter:       scrolled ? "blur(20px) saturate(1.5)" : "blur(6px)",
-          WebkitBackdropFilter: scrolled ? "blur(20px) saturate(1.5)" : "blur(6px)",
+          backdropFilter: scrolled ? "blur(20px) saturate(1.5)" : "blur(6px)",
+          WebkitBackdropFilter: scrolled
+            ? "blur(20px) saturate(1.5)"
+            : "blur(6px)",
           willChange: "transform",
         }}
       >
         {/* Rising bubbles when scrolled */}
-        {scrolled && NAV_BUBBLES.map((b) => (
-          <div
-            key={b.id}
-            className="nav-bubble"
-            style={{
-              width: b.size, height: b.size,
-              left: b.left,
-              "--nb-dur":   b.dur,
-              "--nb-delay": b.delay,
-            }}
-          />
-        ))}
+        {scrolled &&
+          NAV_BUBBLES.map((b) => (
+            <div
+              key={b.id}
+              className="nav-bubble"
+              style={{
+                width: b.size,
+                height: b.size,
+                left: b.left,
+                "--nb-dur": b.dur,
+                "--nb-delay": b.delay,
+              }}
+            />
+          ))}
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between relative">
-
           {/* Logo */}
           <a
             href="#top"
@@ -419,7 +422,11 @@ export default function Navbar() {
             onClick={close}
             style={{ filter: "drop-shadow(0 0 14px rgba(56,189,248,0.35))" }}
           >
-            <img src="/images/atlas-white.png" alt="ATLAS" className="h-9 w-auto" />
+            <img
+              src="/images/atlas-white.png"
+              alt="ATLAS"
+              className="h-9 w-auto"
+            />
           </a>
 
           {/* Desktop links */}
@@ -437,9 +444,33 @@ export default function Navbar() {
                     {/* Three tiny rising bubbles on the active link */}
                     {isActive && (
                       <>
-                        <span className="nav-link-dot" style={{ "--ds": "2.5px", "--dd": "1.4s", "--ddy": "0s",   left: "15%" }} />
-                        <span className="nav-link-dot" style={{ "--ds": "3px",   "--dd": "1.9s", "--ddy": "0.5s", left: "48%" }} />
-                        <span className="nav-link-dot" style={{ "--ds": "2px",   "--dd": "1.6s", "--ddy": "0.9s", left: "75%" }} />
+                        <span
+                          className="nav-link-dot"
+                          style={{
+                            "--ds": "2.5px",
+                            "--dd": "1.4s",
+                            "--ddy": "0s",
+                            left: "15%",
+                          }}
+                        />
+                        <span
+                          className="nav-link-dot"
+                          style={{
+                            "--ds": "3px",
+                            "--dd": "1.9s",
+                            "--ddy": "0.5s",
+                            left: "48%",
+                          }}
+                        />
+                        <span
+                          className="nav-link-dot"
+                          style={{
+                            "--ds": "2px",
+                            "--dd": "1.6s",
+                            "--ddy": "0.9s",
+                            left: "75%",
+                          }}
+                        />
                       </>
                     )}
                   </a>

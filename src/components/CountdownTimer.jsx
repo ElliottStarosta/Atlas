@@ -1,37 +1,37 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
 /** May 2, 2026 · 8:00 AM Eastern (Earl of March, Kanata) */
-const TARGET = new Date('2026-05-02T08:00:00-04:00')
+const TARGET = new Date("2026-05-02T08:00:00-04:00");
 
 function pad(n) {
-  return String(n).padStart(2, '0')
+  return String(n).padStart(2, "0");
 }
 
 export default function CountdownTimer() {
-  const [time, setTime] = useState(getTimeLeft())
+  const [time, setTime] = useState(getTimeLeft());
 
   function getTimeLeft() {
-    const diff = TARGET.getTime() - Date.now()
-    if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 }
+    const diff = TARGET.getTime() - Date.now();
+    if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     return {
       days: Math.floor(diff / 86400000),
       hours: Math.floor((diff % 86400000) / 3600000),
       minutes: Math.floor((diff % 3600000) / 60000),
       seconds: Math.floor((diff % 60000) / 1000),
-    }
+    };
   }
 
   useEffect(() => {
-    const id = setInterval(() => setTime(getTimeLeft()), 1000)
-    return () => clearInterval(id)
-  }, [])
+    const id = setInterval(() => setTime(getTimeLeft()), 1000);
+    return () => clearInterval(id);
+  }, []);
 
   const units = [
-    { label: 'Days', value: pad(time.days) },
-    { label: 'Hours', value: pad(time.hours) },
-    { label: 'Minutes', value: pad(time.minutes) },
-    { label: 'Seconds', value: pad(time.seconds) },
-  ]
+    { label: "Days", value: pad(time.days) },
+    { label: "Hours", value: pad(time.hours) },
+    { label: "Minutes", value: pad(time.minutes) },
+    { label: "Seconds", value: pad(time.seconds) },
+  ];
 
   return (
     <div
@@ -61,5 +61,5 @@ export default function CountdownTimer() {
         </React.Fragment>
       ))}
     </div>
-  )
+  );
 }
