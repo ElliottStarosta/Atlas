@@ -24,11 +24,11 @@ const events = [
   },
   {
     time: "10:30 AM",
-    title: "Workshop: Design Basics",
-    body: "Optional 45-min workshop on UI/UX fundamentals; perfect for non-designers who want their project to look great.",
-    icon: "fa-pen-ruler",
+    title: "Workshop: Git Basics",
+    body: "Optional 45-min workshop covering version control fundamentals—learn how to track changes, use commits, branches, and collaborate using Git and GitHub.",
+    icon: "fa-code-branch",
     color: "#c084fc",
-    glow: "rgba(192,132,252,0.4)",
+    glow: "rgba(52,211,153,0.4)",
     tag: "Optional",
   },
   {
@@ -558,8 +558,8 @@ export default function Schedule() {
               className="sch3-sub font-body text-base leading-relaxed mx-auto"
               style={{ color: "rgba(186,230,252,.72)", maxWidth: "40ch" }}
             >
-              From first badge to final bow, every moment of your day at Earl
-              of March Secondary School.
+              From first badge to final bow, every moment of your day at Earl of
+              March Secondary School.
             </p>
           </div>
 
