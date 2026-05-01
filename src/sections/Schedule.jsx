@@ -41,8 +41,8 @@ const events = [
   },
   {
     time: "1:00 PM",
-    title: "Workshop: APIs & Tools",
-    body: "Optional 45-min deep-dive on popular APIs, Firebase, and rapid prototyping tools to accelerate your build.",
+    title: "Workshop: Ren’Py",
+    body: "Quick 45‑min intro to Ren’Py—learn scene scripting, dialogue flow, and rapid visual‑novel prototyping.",
     icon: "fa-plug",
     color: "#c084fc",
     glow: "rgba(192,132,252,0.4)",
